@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Muhammad Afifudin">
+	<base href="https://afiiif.github.io/statistiku/">
+	<link rel="canonical" href="https://afiiif.github.io/statistiku/documentation/algorithms/basic">
+	<meta property="og:site_name" content="Statistiku">
+	<meta property="og:url" content="https://afiiif.github.io/statistiku/documentation/algorithms/basic">
+	<meta property="og:title" content="Basic Algorithms · Statistiku">
+	<meta name="description" content="Statistiku, the most instant data analytics tool. Statistiku is a nonprofit organization that specialises in data visualization and statistical analysis. Our mission is to provide a simple but powerful data analytics tool for anyone, anywhere, at anytime.">
+	<meta name="keywords" content="Data Analytics Tool, Statistics, Visualization, Charting, Machine Learning, Data Mining, Data Science, Histogram, Boxplot, Q-Q Plot, Correlation, P-Value">
+	<title>Basic Algorithms · Statistiku</title>
+	<link rel="shortcut icon" href="img/statistiku-icon.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/statistiku.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<header>
+	<div class="container-fluid d-flex align-items-center">
+		<a href="" class="brand">
+			<svg viewBox="0 0 427.07 81.4896">
+				<rect fill="#4B89FF" x="0.000794355" y="0.000745551" width="81.488" height="81.4885" rx="22" ry="22"/>
+				<polygon fill="white" points="18.3707,18.1189 63.1189,18.1189 55.8532,26.7772 36.9415,26.7772 48.6619,40.7443 36.9415,54.7119 55.8532,54.7119 63.1179,63.3696 18.3702,63.3701 37.3574,40.7443 "/>
+				<path fill="#4B89FF" fill-rule="nonzero" d="M111.509 30.4078c0.0116511,2.16254 0.381446,4.03532 1.08709,5.6305 0.705143,1.60785 1.66458,2.98369 2.85552,4.13917 1.20259,1.15649 2.55513,2.13924 4.04646,2.96038 1.50299,0.820133 3.04093,1.53743 4.63611,2.13822 1.59569,0.601803 3.14528,1.15649 4.63662,1.65344 1.49134,0.509101 2.84387,1.00604 4.04646,1.51464 1.20209,0.508594 2.15038,1.07494 2.85552,1.71119 0.705143,0.624092 1.07494,1.37584 1.08659,2.24258 0.0238087,1.20259 -0.554692,2.04704 -1.71119,2.54398 -1.15599,0.49745 -2.98267,0.728445 -5.50285,0.716794 -1.86164,0.0116511 -3.78102,-0.173753 -5.7693,-0.543547 -1.98828,-0.369795 -4.00037,-0.947789 -6.01195,-1.75728 -2.01209,-0.809496 -3.97706,-1.86113 -5.9081,-3.17922l0 12.1389c2.58958,1.43359 5.45675,2.52068 8.62533,3.28408 3.16757,0.762891 6.50889,1.14484 10.0351,1.15599 2.67063,0.0116511 5.17966,-0.219344 7.51494,-0.705143 2.33528,-0.474148 4.39296,-1.27199 6.17405,-2.40518 1.79173,-1.12103 3.17922,-2.63618 4.19692,-4.55506 1.00503,-1.91888 1.51413,-4.31241 1.53743,-7.17959 -0.0116511,-2.13924 -0.381446,-4.01202 -1.08709,-5.6072 -0.704636,-1.59569 -1.65293,-2.97153 -2.85552,-4.13917 -1.20259,-1.15599 -2.55513,-2.15038 -4.04646,-2.97102 -1.49134,-0.832798 -3.04042,-1.54908 -4.63611,-2.15089 -1.59518,-0.612441 -3.14427,-1.15599 -4.63662,-1.64128 -1.49134,-0.486305 -2.84387,-0.971597 -4.04646,-1.44524 -1.20209,-0.486305 -2.14987,-1.00604 -2.85552,-1.58404 -0.705143,-0.578501 -1.07494,-1.26034 -1.08659,-2.03488 -0.0111445,-0.601296 0.173753,-1.13319 0.554692,-1.59569 0.381446,-0.46199 1.01769,-0.821147 1.91989,-1.08659 0.901184,-0.265948 2.13822,-0.416399 3.69896,-0.439194 1.88443,-0.0233021 3.72327,0.127149 5.52666,0.46199 1.81503,0.335855 3.53787,0.844449 5.17966,1.52629 1.64179,0.682347 3.15592,1.54959 4.55506,2.58958l0 -11.7924c-1.42194,-0.809496 -3.00597,-1.50299 -4.76326,-2.09263 -1.75779,-0.577994 -3.60727,-1.01769 -5.57225,-1.32974 -1.95434,-0.300395 -3.94262,-0.462497 -5.96636,-0.462497 -2.50903,0 -4.8671,0.28925 -7.07574,0.866738 -2.19597,0.578501 -4.13866,1.4574 -5.82654,2.63618 -1.67623,1.17929 -2.99432,2.65948 -3.95427,4.45172 -0.948295,1.80338 -1.43359,3.90716 -1.45689,6.33514zm46.4082 -7.35283l0 9.36492 -5.27185 0 0 9.71192 5.27185 0 0 13.1799c0.0116511,2.19648 0.358144,4.02316 1.03998,5.50335 0.682854,1.47968 1.60785,2.64732 2.78714,3.52622 1.16713,0.866738 2.49687,1.49134 3.98821,1.86113 1.49134,0.381446 3.04093,0.56685 4.67106,0.555198 1.69954,0 3.29472,-0.115497 4.7977,-0.35865 1.49134,-0.230995 2.90213,-0.577994 4.22022,-1.02833l0 -9.15723c-0.89004,0.312046 -1.76894,0.520245 -2.62453,0.6479 -0.855593,0.127149 -1.75728,0.184897 -2.71723,0.184897 -1.49134,0 -2.58907,-0.35865 -3.30637,-1.05214 -0.716287,-0.705649 -1.06379,-1.71119 -1.06379,-3.04093l0 -10.8213 9.01843 0 0 -9.71192 -9.01843 0 0 -12.1394 -11.7924 2.77447zm58.1312 33.1584l0 -9.29552c-0.0116511,-2.95988 -0.415892,-5.43395 -1.22539,-7.43388 -0.809496,-2.00044 -1.97713,-3.59562 -3.50292,-4.78656 -1.51514,-1.19043 -3.34183,-2.03488 -5.48107,-2.55462 -2.13822,-0.520752 -4.54341,-0.775049 -7.20238,-0.763398 -1.66509,0.0116511 -3.30637,0.1388 -4.9365,0.369795 -1.63064,0.242646 -3.14528,0.532403 -4.53277,0.878895 -1.38698,0.335348 -2.55513,0.658538 -3.50241,0.971091l0 9.92012c1.08659,-0.450845 2.25372,-0.867751 3.50241,-1.24869 1.23755,-0.393097 2.54398,-0.705649 3.90817,-0.948295 1.37584,-0.242646 2.78612,-0.35865 4.24301,-0.369795 1.57239,0.0111445 2.86717,0.196042 3.89652,0.554692 1.02884,0.35865 1.79173,0.855593 2.28918,1.47968 0.508594,0.624598 0.75124,1.32974 0.75124,2.12759l0 1.17929c-1.10938,-0.242646 -2.27753,-0.427543 -3.50292,-0.56685 -1.21424,-0.127149 -2.45128,-0.196548 -3.71162,-0.196548 -1.30644,0 -2.62453,0.104353 -3.97706,0.335855 -1.35254,0.230995 -2.64783,0.589139 -3.88487,1.10938 -1.24869,0.509101 -2.35807,1.17929 -3.34082,2.03539 -0.994393,0.843436 -1.76894,1.88393 -2.34744,3.12147 -0.566343,1.22539 -0.866738,2.68228 -0.878389,4.35851 0.0116511,1.61848 0.312046,3.05207 0.913342,4.32406 0.601296,1.27149 1.42194,2.34693 2.48573,3.22582 1.06379,0.89004 2.28918,1.56074 3.68832,2.02273 1.38749,0.462497 2.89048,0.693998 4.49731,0.693998 2.34693,-0.0111445 4.47401,-0.370301 6.3706,-1.07494 1.89608,-0.705649 3.63007,-1.68788 5.2136,-2.94823 0.763398,1.17929 1.81554,2.09213 3.14528,2.71672 1.32974,0.635743 2.92492,0.947789 4.76326,0.95944 1.12154,0 2.19699,-0.103846 3.21367,-0.288744 1.02935,-0.185404 1.94269,-0.439194 2.75168,-0.75124l0 -7.28445c-0.207693,0.0693998 -0.427543,0.115497 -0.658538,0.150957 -0.231502,0.0339401 -0.450845,0.0577487 -0.659551,0.0577487 -0.404241,0 -0.774036,-0.0577487 -1.12103,-0.185404 -0.346492,-0.127149 -0.624598,-0.346999 -0.832291,-0.647394 -0.21985,-0.300395 -0.323697,-0.716794 -0.335348,-1.24869zm-21.2966 -0.693998c0.0116511,-0.878389 0.266455,-1.57239 0.751747,-2.10378 0.485292,-0.53139 1.12154,-0.913342 1.91888,-1.15599 0.797844,-0.231502 1.6656,-0.346999 2.60173,-0.346999 0.809496,0 1.58353,0.0693998 2.32363,0.184897 0.740602,0.115497 1.37584,0.265948 1.90773,0.439194l0 4.50947c-0.89004,0.647394 -1.79173,1.09773 -2.68228,1.36419 -0.901691,0.254297 -1.82668,0.381446 -2.79777,0.369795 -0.832291,-0.0116511 -1.54959,-0.161595 -2.15038,-0.46199 -0.601296,-0.301408 -1.06379,-0.693998 -1.38749,-1.1798 -0.324203,-0.49745 -0.485799,-1.02884 -0.485799,-1.61899zm31.7709 -32.4644l0 9.36492 -5.27135 0 0 9.71192 5.27135 0 0 13.1799c0.0116511,2.19648 0.35865,4.02316 1.04049,5.50335 0.682854,1.47968 1.60734,2.64732 2.78663,3.52622 1.16764,0.866738 2.49738,1.49134 3.98872,1.86113 1.49134,0.381446 3.04042,0.56685 4.67056,0.555198 1.70004,0 3.29522,-0.115497 4.79821,-0.35865 1.49134,-0.230995 2.90213,-0.577994 4.22022,-1.02833l0 -9.15723c-0.890546,0.312046 -1.76894,0.520245 -2.62453,0.6479 -0.8561,0.127149 -1.75728,0.184897 -2.71723,0.184897 -1.49134,0 -2.58958,-0.35865 -3.30637,-1.05214 -0.716794,-0.705649 -1.06379,-1.71119 -1.06379,-3.04093l0 -10.8213 9.01843 0 0 -9.71192 -9.01843 0 0 -12.1394 -11.7929 2.77447zm38.4997 42.6621l0 -33.2972 -11.7924 0 0 33.2972 11.7924 0zm0.832798 -44.5349c-0.0116511,-1.50349 -0.335348,-2.72837 -0.948295,-3.67667 -0.612441,-0.948295 -1.42194,-1.65293 -2.42798,-2.10428 -1.01719,-0.450845 -2.13873,-0.670189 -3.35247,-0.670189 -1.19094,0 -2.30083,0.219344 -3.31802,0.670189 -1.01769,0.451352 -1.82719,1.15599 -2.45128,2.10428 -0.624598,0.948295 -0.936644,2.17318 -0.95944,3.67667 0.0227956,1.51464 0.334841,2.76333 0.95944,3.72277 0.624092,0.95944 1.43359,1.66509 2.45128,2.12759 1.01719,0.450339 2.12708,0.670189 3.31802,0.670189 1.21374,0 2.33528,-0.21985 3.35247,-0.670189 1.00604,-0.462497 1.81554,-1.16815 2.42798,-2.12759 0.612947,-0.95944 0.936644,-2.20813 0.948295,-3.72277zm5.13356 20.8108c0.0233021,1.69954 0.335348,3.14477 0.971597,4.33571 0.624092,1.19043 1.45588,2.17318 2.49687,2.97102 1.02884,0.785687 2.17368,1.43359 3.41072,1.95383 1.23704,0.508594 2.48573,0.947789 3.72226,1.30644 1.23755,0.35865 2.38188,0.693998 3.41123,1.01719 1.04049,0.323697 1.87278,0.693998 2.49738,1.09875 0.635743,0.415892 0.958933,0.924993 0.970584,1.53743 0,0.589645 -0.358144,1.00604 -1.08608,1.27199 -0.728951,0.265948 -1.82719,0.393097 -3.28408,0.393097 -1.32923,0 -2.75168,-0.127149 -4.25466,-0.381446 -1.49134,-0.254297 -2.97102,-0.635743 -4.43956,-1.15649 -1.46803,-0.53139 -2.83222,-1.19094 -4.06926,-1.99993l0 9.36441c1.78008,1.00604 3.80382,1.76944 6.06919,2.27804 2.26638,0.519739 4.70602,0.774542 7.31889,0.774542 2.11543,0.0116511 4.12752,-0.161595 6.0236,-0.509101 1.89558,-0.346492 3.58397,-0.936644 5.06416,-1.74563 1.47968,-0.820133 2.64732,-1.91888 3.49127,-3.30637 0.855593,-1.38698 1.29479,-3.12198 1.30644,-5.1908 -0.0116511,-1.75728 -0.335348,-3.23798 -0.971597,-4.43956 -0.624092,-1.20259 -1.45588,-2.19699 -2.49687,-2.98369 -1.02884,-0.785687 -2.17368,-1.42194 -3.41072,-1.91888 -1.23704,-0.496943 -2.48573,-0.924993 -3.72226,-1.26034 -1.23755,-0.346492 -2.38188,-0.670189 -3.41123,-0.982742 -1.04049,-0.312046 -1.87278,-0.68184 -2.49738,-1.09773 -0.635743,-0.416905 -0.958933,-0.959946 -0.970584,-1.60785 0.0116511,-0.46199 0.184897,-0.808989 0.508594,-1.05164 0.32319,-0.242646 0.716287,-0.404748 1.20209,-0.485799 0.485799,-0.0921954 0.983248,-0.1388 1.48019,-0.127149 1.31809,0 2.68228,0.161595 4.11586,0.474148 1.43359,0.300901 2.80943,0.716794 4.13866,1.24818 1.31809,0.532403 2.47458,1.13319 3.46847,1.81554l0 -9.36492c-1.76894,-0.843942 -3.69947,-1.52578 -5.78045,-2.04603 -2.09263,-0.520245 -4.34737,-0.786193 -6.77535,-0.797844 -1.87278,-0.0116511 -3.67616,0.161595 -5.39951,0.520245 -1.72233,0.346999 -3.27142,0.936644 -4.6356,1.74614 -1.36419,0.808989 -2.43963,1.89558 -3.23697,3.25976 -0.798351,1.37584 -1.20259,3.06372 -1.22589,5.08746zm37.5286 -18.938l0 9.36492 -5.27185 0 0 9.71192 5.27185 0 0 13.1799c0.0116511,2.19648 0.358144,4.02316 1.04049,5.50335 0.682347,1.47968 1.60734,2.64732 2.78663,3.52622 1.16764,0.866738 2.49738,1.49134 3.98872,1.86113 1.49134,0.381446 3.04042,0.56685 4.67056,0.555198 1.69954,0 3.29472,-0.115497 4.7977,-0.35865 1.49184,-0.230995 2.90263,-0.577994 4.22072,-1.02833l0 -9.15723c-0.890546,0.312046 -1.76944,0.520245 -2.62453,0.6479 -0.8561,0.127149 -1.75779,0.184897 -2.71723,0.184897 -1.49134,0 -2.58958,-0.35865 -3.30688,-1.05214 -0.716287,-0.705649 -1.06379,-1.71119 -1.06379,-3.04093l0 -10.8213 9.01843 0 0 -9.71192 -9.01843 0 0 -12.1394 -11.7924 2.77447zm38.4997 42.6621l0 -33.2972 -11.7929 0 0 33.2972 11.7929 0zm0.832291 -44.5349c-0.0116511,-1.50349 -0.335348,-2.72837 -0.947789,-3.67667 -0.612947,-0.948295 -1.42194,-1.65293 -2.42798,-2.10428 -1.01769,-0.450845 -2.13924,-0.670189 -3.35247,-0.670189 -1.19094,0 -2.30083,0.219344 -3.31853,0.670189 -1.01769,0.451352 -1.82668,1.15599 -2.45128,2.10428 -0.624092,0.948295 -0.936138,2.17318 -0.958933,3.67667 0.0227956,1.51464 0.334841,2.76333 0.958933,3.72277 0.624598,0.95944 1.43359,1.66509 2.45128,2.12759 1.01769,0.450339 2.12759,0.670189 3.31853,0.670189 1.21323,0 2.33477,-0.21985 3.35247,-0.670189 1.00604,-0.462497 1.81503,-1.16815 2.42798,-2.12759 0.612441,-0.95944 0.936138,-2.20813 0.947789,-3.72277zm41.8992 44.5349l-11.5148 -16.926 10.8218 -16.3713 -13.1804 0 -7.28394 11.6541 -2.63618 0 0 -26.915 -11.7929 0 0 48.5581 11.7929 0 0 -12.6252 2.49687 0 8.18563 12.6252 13.111 0zm25.5285 -33.2972l0 21.3655c-0.347506,0.451352 -0.797844,0.902197 -1.35355,1.34139 -0.554692,0.439701 -1.18993,0.809496 -1.91888,1.10989 -0.727938,0.300395 -1.53743,0.450845 -2.41633,0.46199 -0.982235,0 -1.84948,-0.184897 -2.61237,-0.565836 -0.751747,-0.370301 -1.35355,-0.948295 -1.78109,-1.71119 -0.439194,-0.775049 -0.658538,-1.74614 -0.670189,-2.92492l0 -19.0768 -11.7929 0 0 20.672c0,1.88443 0.265948,3.65337 0.797844,5.29465 0.531896,1.64229 1.34139,3.09918 2.42747,4.34787 1.08709,1.24869 2.47458,2.23093 4.15132,2.93657 1.67623,0.716287 3.65286,1.07544 5.94255,1.08659 2.20762,-0.0111445 4.18526,-0.450845 5.9309,-1.30644 1.74563,-0.855593 3.30688,-2.04653 4.68271,-3.54952l0 3.81547 10.4049 0 0 -33.2972 -11.7924 0z"/>
+			</svg>
+		</a>
+		<div class="ml-auto h-100 d-flex align-items-center">
+			<a href="app" class="nav-link d-none d-sm-flex ">App</a>
+			<a href="documentation" class="nav-link d-none d-md-flex active">Documentation</a>
+			<a href="about" class="nav-link d-none d-md-flex ">About</a>
+			<div class="dropdown d-flex d-md-none">
+				<div class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars fa-lg"></i></div>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a href="app" class="dropdown-item d-sm-none ">App</a>
+					<a href="documentation" class="dropdown-item active">Documentation</a>
+					<a href="about" class="dropdown-item ">About</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="notif-container"></div>
+
+<!-- --------------------------------------------------------------------------- -->
+
+<div class="container-fluid fz-auto">
+	<div class="row flex-xl-nowrap">
+
+		<aside class="col-md-3 col-xl-2 bg-white mb-3 mb-md-0">
+			<div class="sticky-md">
+				<div class="row align-items-center py-3 border-bottom bc-softgray">
+					<div class="col-auto d-md-none pr-2">
+						<div data-toggle="collapse" data-target=".aside-collapse" class="cur-p">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false" role="img"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+						</div>
+					</div>
+					<div class="col">
+						<div class="position-relative">
+							<input type="search" class="form-control" placeholder="Search..." oninput="search(this.value)">
+							<div class="aside-search-result position-absolute dropdown">
+								<div class="dropdown-menu rounded" id="aside-search-result"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="d-md-block collapse aside-collapse pure-tree-container py-3 row">
+					<ul class="pure-tree main-tree col px-3">
+						<li>
+							<input type="checkbox" id="pure-tree-trigger-1" >
+							<label for="pure-tree-trigger-1">Introduction</label>
+							<ul class="pure-tree">
+								<li class="pure-tree-link"><a href="documentation/intro/workspace" class="">Workspace</a>
+								<li class="pure-tree-link"><a href="documentation/intro/data-editor" class="">Data Editor</a>
+								<li class="pure-tree-link"><a href="documentation/intro/data-types" class="">Data Types</a>
+							</ul>
+						</li>
+						<li>
+							<input type="checkbox" id="pure-tree-trigger-2" >
+							<label for="pure-tree-trigger-2">Data Preparation</label>
+							<ul class="pure-tree">
+								<li class="pure-tree-link"><a href="documentation/data-preparation/data-source" class="">Data Source</a>
+								<li class="pure-tree-link"><a href="documentation/data-preparation/combine-data" class="">Combine Data</a>
+								<li class="pure-tree-link"><a href="documentation/data-preparation/name-variable" class="">Name Variable</a>
+								<li class="pure-tree-link"><a href="documentation/data-preparation/add-labels" class="">Add Labels</a>
+								<li class="pure-tree-link"><a href="documentation/data-preparation/weight-data" class="">Weight Data</a>
+								<li class="pure-tree-link"><a href="documentation/data-preparation/filter-data" class="">Filter Data</a>
+								<li class="pure-tree-link"><a href="documentation/data-preparation/compute-variable" class="">Compute New Variable</a>
+								<li class="pure-tree-link"><a href="documentation/data-preparation/example-dataset" class="">Use Example Dataset</a>
+							</ul>
+						</li>
+						<li>
+							<input type="checkbox" id="pure-tree-trigger-3" >
+							<label for="pure-tree-trigger-3">Data Analysis</label>
+							
+							<ul class="pure-tree">
+								<li>
+									<input type="checkbox" id="pure-tree-trigger-visualization" >
+									<label for="pure-tree-trigger-visualization">Data Visualization</label>
+									<ul class="pure-tree">
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/bar-chart" class="">Bar Chart</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/pie-chart" class="">Pie Chart</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/boxplot" class="">Box Plot</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/histogram" class="">Histogram</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/areaspline" class="">Area Spline Chart</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/scatter" class="">Scatter Plot</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/3d-scatter" class="">3D Scatter Plot</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/qqplot" class="">Q-Q Plot</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/heat-map" class="">Heat Map</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/packed-bubble-chart" class="">Packed Bubble Chart</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/sunburst" class="">Sunburst</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/visualization/parallel-coordinates-chart" class="">Parallel Coordinates Chart</a>
+									</ul>
+								</li>
+							</ul>
+							
+							<ul class="pure-tree">
+								<li>
+									<input type="checkbox" id="pure-tree-trigger-descriptive" >
+									<label for="pure-tree-trigger-descriptive">Descriptive Analysis</label>
+									<ul class="pure-tree">
+										<li class="pure-tree-link"><a href="documentation/data-analysis/descriptive/summary" class="">Summary</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/descriptive/pearson-correlation" class="">Pearson Correlation</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/descriptive/spearman-correlation" class="">Spearman&#39;s Rank Correlation</a>
+									</ul>
+								</li>
+							</ul>
+							
+							<ul class="pure-tree">
+								<li>
+									<input type="checkbox" id="pure-tree-trigger-compare" >
+									<label for="pure-tree-trigger-compare">Compare Means or Variances</label>
+									<ul class="pure-tree">
+										<li class="pure-tree-link"><a href="documentation/data-analysis/compare/one-sample-t-test" class="">One-Sample T Test</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/compare/anova" class="">One-Way ANOVA</a>
+										<li class="pure-tree-link"><a href="documentation/data-analysis/compare/f-test" class="">F Test</a>
+									</ul>
+								</li>
+							</ul>
+							
+							<ul class="pure-tree">
+								<li>
+									<input type="checkbox" id="pure-tree-trigger-causal" >
+									<label for="pure-tree-trigger-causal">Causal Analysis</label>
+									<ul class="pure-tree">
+										<li class="pure-tree-link"><a href="documentation/data-analysis/causal/regression" class="">Linear Regression</a>
+									</ul>
+								</li>
+							</ul>
+							
+							<ul class="pure-tree">
+								<li>
+									<input type="checkbox" id="pure-tree-trigger-multivariate" >
+									<label for="pure-tree-trigger-multivariate">Multivariate</label>
+									<ul class="pure-tree">
+										<li class="pure-tree-link"><a href="documentation/data-analysis/multivariate/qqplot-multivariate" class="">Multivariate Normal Q-Q Plot</a>
+									</ul>
+								</li>
+							</ul>
+							
+						</li>
+						<li>
+							<input type="checkbox" id="pure-tree-trigger-4" checked>
+							<label for="pure-tree-trigger-4">Algorithms</label>
+							<ul class="pure-tree">
+								<li class="pure-tree-link"><a href="documentation/algorithms/basic" class="active">Basic Algorithms</a>
+								<li class="pure-tree-link"><a href="documentation/algorithms" class="">Algorithms</a>
+							</ul>
+						</li>
+						<li class="pure-tree-link"><a href="documentation/release-notes" class="">Release Notes</a></li>
+					</ul>
+				</div>
+			</div>
+		</aside>
+
+		<script>
+			var $asideSearchResult = document.getElementById('aside-search-result');
+			const suggest = [{
+				parent: 'Introduction',
+				childs: [
+					{ href: 'documentation/intro/workspace', label: 'Workspace', key: "workspace layout" },
+					{ href: 'documentation/intro/data-editor', label: 'Data Editor', key: "data editor spreadsheet" },
+					{ href: 'documentation/intro/data-types', label: 'Data Types', key: "data types" },
+				]
+			},{
+				parent: 'Data Preparation',
+				childs: [
+					{ href: 'documentation/data-preparation/data-source', label: 'Data Source', key: "data source csv xls dbf" },
+					{ href: 'documentation/data-preparation/combine-data', label: 'Combine Data', key: "combine data" },
+					{ href: 'documentation/data-preparation/name-variable', label: 'Name Variable', key: "name variable" },
+					{ href: 'documentation/data-preparation/add-labels', label: 'Add Labels', key: "add labels value categoric" },
+					{ href: 'documentation/data-preparation/weight-data', label: 'Weight Data', key: "weight data" },
+					{ href: 'documentation/data-preparation/filter-data', label: 'Filter Data', key: "filter data exclude include" },
+					{ href: 'documentation/data-preparation/compute-variable', label: 'Compute New Variable', key: "compute new variable calculate" },
+					{ href: 'documentation/data-preparation/example-dataset', label: 'Use Example Dataset', key: "use example dataset csv" },
+				]
+			},{
+				parent: 'Data Analysis',
+				childs: [
+					{ href: 'documentation/data-analysis/visualization/bar-chart', label: 'Bar Chart', key: 'bar chart' },
+					{ href: 'documentation/data-analysis/visualization/pie-chart', label: 'Pie Chart', key: 'pie chart' },
+					{ href: 'documentation/data-analysis/visualization/boxplot', label: 'Box Plot', key: 'box plot' },
+					{ href: 'documentation/data-analysis/visualization/histogram', label: 'Histogram', key: 'histogram' },
+					{ href: 'documentation/data-analysis/visualization/areaspline', label: 'Area Spline Chart', key: 'area spline chart' },
+					{ href: 'documentation/data-analysis/visualization/scatter', label: 'Scatter Plot', key: 'scatter plot' },
+					{ href: 'documentation/data-analysis/visualization/3d-scatter', label: '3D Scatter Plot', key: '3d scatter plot' },
+					{ href: 'documentation/data-analysis/visualization/qqplot', label: 'Q-Q Plot', key: 'q-q plot' },
+					{ href: 'documentation/data-analysis/visualization/heat-map', label: 'Heat Map', key: 'heat map' },
+					{ href: 'documentation/data-analysis/visualization/packed-bubble-chart', label: 'Packed Bubble Chart', key: 'packed bubble chart' },
+					{ href: 'documentation/data-analysis/visualization/sunburst', label: 'Sunburst', key: 'sunburst' },
+					{ href: 'documentation/data-analysis/visualization/parallel-coordinates-chart', label: 'Parallel Coordinates Chart', key: 'parallel coordinates chart' },
+					{ href: 'documentation/data-analysis/descriptive/summary', label: 'Summary', key: 'summary' },
+					{ href: 'documentation/data-analysis/descriptive/pearson-correlation', label: 'Pearson Correlation', key: 'pearson correlation' },
+					{ href: 'documentation/data-analysis/descriptive/spearman-correlation', label: 'Spearman&#39;s Rank Correlation', key: 'spearman&#39;s rank correlation' },
+					{ href: 'documentation/data-analysis/compare/one-sample-t-test', label: 'One-Sample T Test', key: 'one-sample t test' },
+					{ href: 'documentation/data-analysis/compare/anova', label: 'One-Way ANOVA', key: 'one-way anova' },
+					{ href: 'documentation/data-analysis/compare/f-test', label: 'F Test', key: 'f test' },
+					{ href: 'documentation/data-analysis/causal/regression', label: 'Linear Regression', key: 'linear regression' },
+					{ href: 'documentation/data-analysis/multivariate/qqplot-multivariate', label: 'Multivariate Normal Q-Q Plot', key: 'multivariate normal q-q plot' },
+				]
+			},{
+				parent: 'Algorithms',
+				childs: [
+					{ href: 'documentation/algorithms/basic', label: 'Basic Algorithms', key: "basic algorithms formula" },
+					{ href: 'documentation/algorithms', label: 'Algorithms', key: "algorithms formula" },
+				]
+			},{
+				parent: 'Release Notes',
+				childs: [
+					{ href: 'documentation/release-notes', label: 'Release Notes', key: "release notes changelog" },
+				]
+			}];
+			search = val => {
+				if (val==='') $asideSearchResult.classList.remove('show');
+				else {
+					val = val.toLowerCase().split(' ').filter(a=>a!=='');
+					let result = [];
+					suggest.forEach(a=>{
+						let childs = a.childs.filter( child => val.map(v=>child.key.indexOf(v)).every(a=>a>=0) ).slice(0,3);
+						if (childs.length) result.push({ parent:a.parent, childs })
+					});
+					$asideSearchResult.innerHTML = result.length?
+						result.map(a=>`<div class="px-3 py-1 fw-600 text-secondary">${a.parent}</div>${a.childs.map(b=>`<a href="${b.href}" class="dropdown-item text-primary">${b.label}</a>`).join('')}`).join('<div class="dropdown-divider"></div>') :
+						'<div class="px-4 py-2 text-danger">No result</div>';
+					$asideSearchResult.classList.add('show');
+				}
+			}
+		</script>
+
+		<main class="col-md-9 col-xl-10 py-3 py-md-4 pl-md-5 pr-xl-5">
+
+			<div class="row">
+				<div class="col-xl-10">
+					<div class="alert alert-primary alert-dismissible fade show mt-3 mt-md-4" role="alert">
+						<div class="d-flex">
+							<div><i class="fas fa-info lead mr-3"></i></div>
+							<div>This page contains information about <span class="fw-600">mathematical algorithms</span>.<br>If you are looking for the code (JavaScript syntax) we use, you can visit our official GitHub page at <a href="https://github.com/statistiku/statistiku" class="alert-link fw-600"><u>github.com/statistiku</u></a> for more information :)</div>
+						</div>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<h2 class="my-4 pt-2">Basic Algorithms</h2>
+					<p>Since Statistiku has capability to weight the data, we will explain the algorithms in the form of <span class="fw-600">weighted</span> formulas. If you want to apply the formulas for unweighted data, you can set <span class="text-blue">1</span>s as the weight.</p>
+					<div class="pb-2 mt-4 pt-3 text-blue"><i>GENERAL NOTATION</i></div>
+					<table class="table table-sm table-notation text-left border-bottom w-auto mb-5">
+						<thead>
+							<tr><th width="1">Notation</th><th>Description</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>`n`</td><td>Total records (items)</td></tr>
+							<tr><td>`X_i`</td><td>Value of `i`th item of `X`</td></tr>
+							<tr><td>`Y_i`</td><td>Value of `i`th item of `Y`</td></tr>
+							<tr><td>`w_i`</td><td>Weight of `i`th item</td></tr>
+							<tr><td>`N`</td><td>Total of frequency</td></tr>
+						</tbody>
+					</table>
+					<ul class="ul-custom">
+						<li>
+							<div>TOTAL OF FREQUENCY</div>
+							<p>`N = \sum_{i=1}^n w_i`</p>
+						</li>
+						<li>
+							<div>SUM</div>
+							<p>`\text{Sum of} \ X = \sum_{i=1}^n w_i X_i`</p>
+						</li>
+						<li>
+							<div>SUM SQUARE</div>
+							<p>`\text{Sum square of} \ X = \sum_{i=1}^n w_i X_i^2`</p>
+						</li>
+						<li>
+							<div id="mean">MEAN</div>
+							<p>`\barX = (\sum_{i=1}^n w_i X_i) / N`</p>
+						</li>
+						<li>
+							<div>GEOMETRIC MEAN</div>
+							<p>`\barX_\text{geom} = \prod_{i=1}^n X_i^(w_i/N)`</p>
+						</li>
+						<li>
+							<div>SUM SQUARED TOTAL</div>
+							<p>`\text{SST} = \sum_{i=1}^n w_i (X_i - \barX)^2`</p>
+						</li>
+						<li>
+							<div id="variance">VARIANCE</div>
+							<p>Variance of sample:</p>
+							<p>`\text{VAR} = \text{SST} / (N-1)`</p>
+							<p>Variance of population:</p>
+							<p>`\text{VAR}_p = \text{SST} / N`</p>
+						</li>
+						<li>
+							<div id="standard-deviation">STANDARD DEVIATION</div>
+							<p>Standard Deviation of sample:</p>
+							<p>`\text{SD} = \sqrt{\text{VAR}}`</p>
+							<p>Standard Deviation of population:</p>
+							<p>`\text{SD}_p = \sqrt{\text{VAR}_p}`</p>
+						</li>
+						<li>
+							<div id="covariance">COVARIANCE</div>
+							<p>Covariance of sample:</p>
+							<p>`\text{COV} = {\sum_{i=1}^n w_i (X_i - \barX) (Y_i - \barY)} / {N-1}`</p>
+							<p>Covariance of population:</p>
+							<p>`\text{COV}_p = {\sum_{i=1}^n w_i (X_i - \barX) (Y_i - \barY)} / N`</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="mt-5 mb-4 text-right">
+				<a href="documentation/algorithms">→ Next: Algorithms</a>
+			</div>
+
+		</main>
+
+	</div>
+</div>
+
+<footer class="p-3 p-sm-4 p-md-5 border-top">
+	<div class="d-flex flex-wrap mb-3">
+		<ul class="nav fw-600">
+			<li class="nav-item mr-3 mr-sm-4"><a href="about">About</a></li>
+			<li class="nav-item mr-3 mr-sm-4"><a href="terms-of-service">Terms of Service</a></li>
+			<li class="nav-item mr-3 mr-sm-4"><a href="privacy">Privacy Policy</a></li>
+		</ul>
+		<div class="w-100 mb-3 d-sm-none"></div>
+		<ul class="nav ml-sm-auto">
+			<li class="nav-item"><a href="mailto:afiiifudin@gmail.com" class="text-dark" title="Email"><i class="fas lead fa-envelope"></i></a></li>
+			<li class="nav-item ml-3"><a href="https://www.youtube.com/@afifu" target="_blank" class="text-dark" title="YouTube"><i class="fab lead fa-youtube"></i></a></li>
+			<li class="nav-item ml-3"><a href="https://github.com/afiiif" target="_blank" class="text-dark" title="GitHub"><i class="fab lead fa-github"></i></a></li>
+		</ul>
+	</div>
+	<div class="d-flex text-muted">
+		<div>Made with <i class="fas fa-heart" title="love"></i> in Indonesia</div>
+		<div class="ml-auto">© 2024 Statistiku</div>
+	</div>
+</footer>
+
+<!-- --------------------------------------------------------------------------- -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
